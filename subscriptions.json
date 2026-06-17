@@ -1,662 +1,213 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-17T03:30:33.016Z",
+    "lastUpdated": "2026-06-17T03:40:56.970Z",
     "status": "active"
   },
   "countries": {
     "US": {
       "currency": "USD",
-      "netflix.com": [
-        {
-          "name": "Standard with Ads",
-          "cost": 6.99
-        },
-        {
-          "name": "Standard",
-          "cost": 15.49
-        },
+      "netflix.com": [],
+      "youtube.com": [
         {
           "name": "Premium",
-          "cost": 22.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
-    },
-    "NZ": {
-      "currency": "NZD",
-      "netflix.com": [
-        {
-          "name": "Standard with Ads",
-          "cost": 9.99
-        },
-        {
-          "name": "Standard",
-          "cost": 21.99
-        },
-        {
-          "name": "Premium",
-          "cost": 28.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 17.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 16.99
-        }
-      ]
-    },
-    "AU": {
-      "currency": "AUD",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
-    },
-    "GB": {
-      "currency": "GBP",
-      "netflix.com": [
-        {
-          "name": "Standard with Ads",
-          "cost": 4.99
-        },
-        {
-          "name": "Standard",
-          "cost": 10.99
-        },
-        {
-          "name": "Premium",
-          "cost": 17.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
-    },
-    "CA": {
-      "currency": "CAD",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
-    },
-    "IE": {
-      "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
-    },
-    "DE": {
-      "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
-    },
-    "FR": {
-      "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
           "cost": 1
         }
       ],
-      "spotify.com": [
+      "spotify.com": []
+    },
+    "NZ": {
+      "currency": "NZD",
+      "netflix.com": [],
+      "youtube.com": [
         {
-          "name": "Premium Individual",
-          "cost": 10.99
+          "name": "Premium",
+          "cost": 1
         }
-      ]
+      ],
+      "spotify.com": []
+    },
+    "AU": {
+      "currency": "AUD",
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
+    "GB": {
+      "currency": "GBP",
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
+    "CA": {
+      "currency": "CAD",
+      "netflix.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
+      "spotify.com": []
+    },
+    "IE": {
+      "currency": "EUR",
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
+    "DE": {
+      "currency": "EUR",
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
+    "FR": {
+      "currency": "EUR",
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "IT": {
       "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "ES": {
       "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "NL": {
       "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "SE": {
       "currency": "SEK",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "NO": {
       "currency": "NOK",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "DK": {
       "currency": "DKK",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "FI": {
       "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "JP": {
       "currency": "JPY",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "KR": {
       "currency": "KRW",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "SG": {
       "currency": "SGD",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "HK": {
       "currency": "HKD",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "TW": {
       "currency": "TWD",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "IN": {
       "currency": "INR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "BR": {
       "currency": "BRL",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "MX": {
       "currency": "MXN",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "ZA": {
       "currency": "ZAR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
+      "netflix.com": [],
       "youtube.com": [
         {
-          "name": "Premium Individual",
-          "cost": 13.99
+          "name": "Premium",
+          "cost": 1
         }
       ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "spotify.com": []
     },
     "AE": {
       "currency": "AED",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "SA": {
       "currency": "SAR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "CH": {
       "currency": "CHF",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
+      "netflix.com": [],
       "youtube.com": [
         {
-          "name": "Premium Individual",
-          "cost": 13.99
+          "name": "Premium",
+          "cost": 1
         }
       ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "spotify.com": []
     },
     "AT": {
       "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "BE": {
       "currency": "EUR",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 13.49
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 12.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 10.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     },
     "PL": {
       "currency": "PLN",
-      "netflix.com": [
-        {
-          "name": "Standard Plan",
-          "cost": 14.99
-        }
-      ],
-      "youtube.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 13.99
-        }
-      ],
-      "spotify.com": [
-        {
-          "name": "Premium Individual",
-          "cost": 11.99
-        }
-      ]
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
     }
   }
 }
