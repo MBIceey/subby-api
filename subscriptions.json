@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "lastUpdated": "2026-06-17T00:00:00Z"
+  },
+  "countries": {
+    "US": {
+      "currency": "USD",
+      "netflix.com": [
+        { "name": "Standard with Ads", "cost": 6.99 },
+        { "name": "Standard", "cost": 15.49 },
+        { "name": "Premium", "cost": 22.99 }
+      ]
+    },
+    "NZ": {
+      "currency": "NZD",
+      "netflix.com": [
+        { "name": "Standard with Ads", "cost": 9.99 },
+        { "name": "Standard", "cost": 21.99 },
+        { "name": "Premium", "cost": 28.99 }
+      ]
+    }
+  }
+}
