@@ -39,10 +39,7 @@ function buildRequestConfig(country) {
   return {
     headers: {
       'Accept-Language': `${country.locale},en;q=0.9`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-      'Cookie': `nf_country=${country.code}; CountryCode=${country.code}; locale=${country.locale};`,
-      'Cache-Control': 'no-cache',
-      'Pragma': 'no-cache'
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
     },
     timeout: 10000
   };
@@ -54,155 +51,53 @@ function parseNumericCost(text) {
   return match ? parseFloat(match[0]) : null;
 }
 
-async function runGlobalScraperPipeline() {
-  const masterOutput = {
-    meta: {
-      lastUpdated: new Date().toISOString(),
-      status: "active"
-    },
-    countries: {}
-  };
-
-  console.log(`🚀 Launching Live Scraper. Processing ${GLOBAL_MARKETS.length} regions...`);
+async function runScraper() {
+  const masterOutput = { meta: { lastUpdated: new Date().toISOString(), status: "active" }, countries: {} };
 
   for (const country of GLOBAL_MARKETS) {
-    console.log(`\n🌍 Fetching Real Data for Region: [${country.code}]`);
-    
-    masterOutput.countries[country.code] = {
-      currency: country.currency
-    };
+    masterOutput.countries[country.code] = { currency: country.currency };
+    console.log(`Processing: ${country.code}`);
 
-    // ==========================================
-    // 1. NETFLIX PARSING ENGINE
-    // ==========================================
+    // Netflix
     try {
-      const url = `https://www.netflix.com/${country.code.toLowerCase()}/`;
-      const response = await axios.get(url, buildRequestConfig(country));
-      const $ = cheerio.load(response.data);
-      let plans = [];
-
-      // Look inside script schema bindings
-      const jsonContext = $('script[type="application/ld+json"]').html();
-      if (jsonContext) {
-        try {
-          const schema = JSON.parse(jsonContext);
-          const graph = schema['@graph'] || (Array.isArray(schema) ? schema : [schema]);
-          graph.forEach(item => {
-            if (item.offers) {
-              const name = item.name || "Standard Plan";
-              const cost = parseNumericCost(item.offers.price || item.offers.lowPrice);
-              if (cost) plans.push({ name, cost });
-            }
-          });
-        } catch (e) {}
-      }
-
-      // Check structural content cards elements directly
-      if (plans.length === 0) {
-        $('[data-uia="plan-selection-option"], .plan-card, meta[property="og:description"]').each((i, el) => {
-          const desc = $(el).attr('content');
-          if (desc && desc.includes('$')) {
-            const cost = parseNumericCost(desc);
-            if (cost) plans.push({ name: "Premium", cost });
-          }
-        });
-      }
-
-      // Fallback matrix defaults if cloud blocking drops structural layout tags
-      if (plans.length === 0) {
-        if (country.code === 'US') {
-          plans = [{ name: "Standard with Ads", cost: 6.99 }, { name: "Standard", cost: 15.49 }, { name: "Premium", cost: 22.99 }];
-        } else if (country.code === 'NZ') {
-          plans = [{ name: "Standard with Ads", cost: 9.99 }, { name: "Standard", cost: 21.99 }, { name: "Premium", cost: 28.99 }];
-        } else if (country.code === 'GB') {
-          plans = [{ name: "Standard with Ads", cost: 4.99 }, { name: "Standard", cost: 10.99 }, { name: "Premium", cost: 17.99 }];
-        } else {
-          const baseline = country.currency === 'EUR' ? 13.49 : 14.99;
-          plans = [{ name: "Standard Plan", cost: baseline }];
-        }
-      }
-
-      masterOutput.countries[country.code]['netflix.com'] = plans;
-      console.log(`   └─ netflix.com: Captured ${plans.length} plan tiers.`);
-    } catch (err) {
-      console.error(`   └─ netflix.com catch block fallback triggered.`);
-      masterOutput.countries[country.code]['netflix.com'] = [{ name: "Standard Plan", cost: country.currency === 'EUR' ? 13.49 : 14.99 }];
-    }
-
-    // ==========================================
-    // 2. YOUTUBE PREMIUM PARSING ENGINE
-    // ==========================================
-    try {
-      const url = `https://www.youtube.com/premium`;
-      const response = await axios.get(url, buildRequestConfig(country));
+      const resp = await axios.get(`https://www.netflix.com/${country.code.toLowerCase()}/`, buildRequestConfig(country));
+      const $ = cheerio.load(resp.data);
       const plans = [];
-
-      const htmlString = response.data;
-      const priceRegex = /"text":"([^"]*?(?:[\d.,]+)\s*?(?:mo|month|\/mo|Billed monthly)[^"]*?)"/gi;
-      let match;
-      let rawPrices = [];
-
-      while ((match = priceRegex.exec(htmlString)) !== null) {
-        if (match[1] && !rawPrices.includes(match[1])) {
-          rawPrices.push(match[1]);
-        }
-      }
-
-      if (rawPrices.length > 0) {
-        const cleanCost = parseNumericCost(rawPrices[0]);
-        if (cleanCost) plans.push({ name: "Premium Individual", cost: cleanCost });
-      }
-
-      if (plans.length === 0) {
-        const fallbackCost = country.code === 'NZ' ? 17.99 : (country.currency === 'EUR' ? 12.99 : 13.99);
-        plans.push({ name: "Premium Individual", cost: fallbackCost });
-      }
-
-      masterOutput.countries[country.code]['youtube.com'] = plans;
-      console.log(`   └─ youtube.com: Captured ${plans.length} live rate metrics.`);
-    } catch (err) {
-      masterOutput.countries[country.code]['youtube.com'] = [{ name: "Premium Individual", cost: country.currency === 'EUR' ? 12.99 : 13.99 }];
-    }
-
-    // ==========================================
-    // 3. SPOTIFY PARSING ENGINE
-    // ==========================================
-    try {
-      // Fixed the typo string: token template literal template brackets
-      const url = `https://www.spotify.com/${country.code.toLowerCase()}/premium/`;
-      const response = await axios.get(url, buildRequestConfig(country));
-      const $ = cheerio.load(response.data);
-      let plans = [];
-
-      $('[data-testid="plan-card"], .sc-bcXt95, card-pricing').each((i, el) => {
-        const costText = $(el).text();
-        const cost = parseNumericCost(costText);
-        if (cost && !plans.some(p => p.cost === cost)) {
-          plans.push({ name: "Premium Individual", cost });
-        }
+      $('[data-uia="plan-selection-option"]').each((i, el) => {
+        const cost = parseNumericCost($(el).text());
+        if (cost) plans.push({ name: "Plan", cost });
       });
-
-      if (plans.length === 0) {
-        if (country.code === 'US') plans = [{ name: "Premium Individual", cost: 11.99 }];
-        else if (country.code === 'NZ') plans = [{ name: "Premium Individual", cost: 16.99 }];
-        else plans = [{ name: "Premium Individual", cost: country.currency === 'EUR' ? 10.99 : 11.99 }];
-      }
-
-      masterOutput.countries[country.code]['spotify.com'] = plans;
-      console.log(`   └─ spotify.com: Captured ${plans.length} tiers.`);
-    } catch (err) {
-      masterOutput.countries[country.code]['spotify.com'] = [{ name: "Premium Individual", cost: country.currency === 'EUR' ? 10.99 : 11.99 }];
+      masterOutput.countries[country.code]['netflix.com'] = plans;
+    } catch (e) {
+      masterOutput.countries[country.code]['netflix.com'] = [];
     }
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
-  }
+    // YouTube
+    try {
+      const resp = await axios.get(`https://www.youtube.com/premium?gl=${country.code}`, buildRequestConfig(country));
+      const match = resp.data.match(/"text":"([\d.]+).*?\/mo"/);
+      masterOutput.countries[country.code]['youtube.com'] = match ? [{ name: "Premium", cost: parseFloat(match[1]) }] : [];
+    } catch (e) {
+      masterOutput.countries[country.code]['youtube.com'] = [];
+    }
 
-  try {
-    fs.writeFileSync('subscriptions.json', JSON.stringify(masterOutput, null, 2));
-    console.log('\n🎉 Global sync operational matrix compiled successfully!');
-  } catch (writeError) {
-    console.error('CRITICAL: Failed saving matrix file:', writeError.message);
+    // Spotify
+    try {
+      const resp = await axios.get(`https://www.spotify.com/${country.code.toLowerCase()}/premium/`, buildRequestConfig(country));
+      const $ = cheerio.load(resp.data);
+      const plans = [];
+      $('.price').each((i, el) => {
+        const cost = parseNumericCost($(el).text());
+        if (cost) plans.push({ name: "Premium", cost });
+      });
+      masterOutput.countries[country.code]['spotify.com'] = plans;
+    } catch (e) {
+      masterOutput.countries[country.code]['spotify.com'] = [];
+    }
+
+    await new Promise(r => setTimeout(r, 2000));
   }
+  fs.writeFileSync('subscriptions.json', JSON.stringify(masterOutput, null, 2));
 }
 
-runGlobalScraperPipeline();
+runScraper();
