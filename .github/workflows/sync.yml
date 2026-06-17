@@ -2,10 +2,15 @@ name: Dynamic Global Pricing Sync
 
 on:
   schedule:
+    # Triggers automatically every single day at midnight UTC
     - cron: '0 0 * * *'
-  workflow_dispatch: # Allows manual trigger from the Actions tab
+  workflow_dispatch: # Allows you to manually click "Run workflow" in the GitHub Actions dashboard
 
-# Set the environment variable globally across the entire workflow
+# Grant the workflow explicit permission to modify and write code updates back into your repository files
+permissions:
+  contents: write
+
+# Force the execution runner environment to use modern JavaScript action layers natively
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
@@ -16,11 +21,13 @@ jobs:
     steps:
     - name: Checkout Repository Code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 1 # Only pulls down the latest commit snapshot to run light and fast
 
     - name: Setup Node.js Environment
       uses: actions/setup-node@v4
       with:
-        node-version: '24' # Forces Node.js 24 runtime usage
+        node-version: '24' # Drops deprecated runtime engines completely
 
     - name: Install Scraper Dependencies
       run: |
@@ -31,8 +38,13 @@ jobs:
 
     - name: Commit and Push Updated Pricing Data
       run: |
+        # Configure local git container signature parameters using standard GitHub bot identifiers
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Stage the updated subscriptions matrix payload file for verification
         git add subscriptions.json
+        
+        # Safe differential query check: Only fires a push routine if actual pricing metrics changed
         git diff-index --quiet HEAD || git commit -m "Automated Sync: Live multi-region subscription pricing data update"
-        git push
+        git push origin HEAD
