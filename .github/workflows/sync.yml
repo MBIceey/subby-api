@@ -1,0 +1,30 @@
+name: Daily Subscription Price Sync
+
+on:
+  schedule:
+    # This tells GitHub to run the script automatically every day at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows you to also trigger it manually with a button click
+
+permissions:
+  contents: write # Gives the action permission to modify and save files to your repo
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-node-version: 20
+
+      - name: Run price synchronization script
+        run: node update_prices.js
+
+      - name: Commit and push changes back to GitHub
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated daily pricing refresh [skip ci]"
