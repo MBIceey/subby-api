@@ -20,8 +20,7 @@ jobs:
     - name: Setup Node.js Environment
       uses: actions/setup-node@v4
       with:
-        node-version: '24' # Bumped from 20 to 24 to match the new standards
-        # Removed the cache: 'npm' line to stop the lock-file error warning
+        node-version: '24' # Forces Node.js 24 runtime usage
 
     - name: Install Scraper Dependencies
       run: |
