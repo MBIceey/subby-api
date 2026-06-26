@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-25T03:37:38.451Z",
+    "lastUpdated": "2026-06-26T03:45:24.816Z",
     "status": "active"
   },
   "countries": {
@@ -19,18 +19,18 @@
     "AU": {
       "currency": "AUD",
       "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
+    "GB": {
+      "currency": "GBP",
+      "netflix.com": [],
       "youtube.com": [
         {
           "name": "Premium",
           "cost": 1
         }
       ],
-      "spotify.com": []
-    },
-    "GB": {
-      "currency": "GBP",
-      "netflix.com": [],
-      "youtube.com": [],
       "spotify.com": []
     },
     "CA": {
@@ -42,12 +42,7 @@
     "IE": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "DE": {
@@ -119,12 +114,7 @@
     "SG": {
       "currency": "SGD",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "HK": {
@@ -160,12 +150,6 @@
     "ZA": {
       "currency": "ZAR",
       "netflix.com": [],
-      "youtube.com": [],
-      "spotify.com": []
-    },
-    "AE": {
-      "currency": "AED",
-      "netflix.com": [],
       "youtube.com": [
         {
           "name": "Premium",
@@ -174,10 +158,21 @@
       ],
       "spotify.com": []
     },
+    "AE": {
+      "currency": "AED",
+      "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
     "SA": {
       "currency": "SAR",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "CH": {
@@ -189,18 +184,18 @@
     "AT": {
       "currency": "EUR",
       "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
+    "BE": {
+      "currency": "EUR",
+      "netflix.com": [],
       "youtube.com": [
         {
           "name": "Premium",
           "cost": 1
         }
       ],
-      "spotify.com": []
-    },
-    "BE": {
-      "currency": "EUR",
-      "netflix.com": [],
-      "youtube.com": [],
       "spotify.com": []
     },
     "PL": {
