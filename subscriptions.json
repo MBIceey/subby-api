@@ -1,23 +1,11 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-27T03:31:10.465Z",
+    "lastUpdated": "2026-06-28T03:54:34.478Z",
     "status": "active"
   },
   "countries": {
     "US": {
       "currency": "USD",
-      "netflix.com": [],
-      "youtube.com": [],
-      "spotify.com": []
-    },
-    "NZ": {
-      "currency": "NZD",
-      "netflix.com": [],
-      "youtube.com": [],
-      "spotify.com": []
-    },
-    "AU": {
-      "currency": "AUD",
       "netflix.com": [],
       "youtube.com": [
         {
@@ -25,6 +13,23 @@
           "cost": 1
         }
       ],
+      "spotify.com": []
+    },
+    "NZ": {
+      "currency": "NZD",
+      "netflix.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
+      "spotify.com": []
+    },
+    "AU": {
+      "currency": "AUD",
+      "netflix.com": [],
+      "youtube.com": [],
       "spotify.com": []
     },
     "GB": {
@@ -167,18 +172,18 @@
     "SA": {
       "currency": "SAR",
       "netflix.com": [],
-      "youtube.com": [],
-      "spotify.com": []
-    },
-    "CH": {
-      "currency": "CHF",
-      "netflix.com": [],
       "youtube.com": [
         {
           "name": "Premium",
           "cost": 1
         }
       ],
+      "spotify.com": []
+    },
+    "CH": {
+      "currency": "CHF",
+      "netflix.com": [],
+      "youtube.com": [],
       "spotify.com": []
     },
     "AT": {
@@ -190,12 +195,7 @@
     "BE": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "PL": {
