@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-08T02:44:00.473Z",
+    "lastUpdated": "2026-07-09T03:20:20.312Z",
     "status": "active"
   },
   "countries": {
@@ -24,12 +24,7 @@
     "AU": {
       "currency": "AUD",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "GB": {
@@ -41,18 +36,18 @@
     "CA": {
       "currency": "CAD",
       "netflix.com": [],
-      "youtube.com": [],
-      "spotify.com": []
-    },
-    "IE": {
-      "currency": "EUR",
-      "netflix.com": [],
       "youtube.com": [
         {
           "name": "Premium",
           "cost": 1
         }
       ],
+      "spotify.com": []
+    },
+    "IE": {
+      "currency": "EUR",
+      "netflix.com": [],
+      "youtube.com": [],
       "spotify.com": []
     },
     "DE": {
@@ -124,12 +119,7 @@
     "SG": {
       "currency": "SGD",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "HK": {
@@ -171,12 +161,7 @@
     "AE": {
       "currency": "AED",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "SA": {
@@ -193,34 +178,19 @@
     "CH": {
       "currency": "CHF",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "AT": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "BE": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "PL": {
