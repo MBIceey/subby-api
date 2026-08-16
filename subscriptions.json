@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-15T01:13:56.930Z",
+    "lastUpdated": "2026-08-16T01:18:17.993Z",
     "status": "active"
   },
   "countries": {
@@ -18,7 +18,12 @@
     "NZ": {
       "currency": "NZD",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "AU": {
@@ -175,7 +180,12 @@
     "ZA": {
       "currency": "ZAR",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "AE": {
@@ -203,7 +213,12 @@
     "CH": {
       "currency": "CHF",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "AT": {
