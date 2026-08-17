@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-16T01:18:17.993Z",
+    "lastUpdated": "2026-08-17T01:15:33.781Z",
     "status": "active"
   },
   "countries": {
@@ -29,12 +29,7 @@
     "AU": {
       "currency": "AUD",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "GB": {
