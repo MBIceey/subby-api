@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-06T03:16:51.864Z",
+    "lastUpdated": "2026-09-07T03:15:08.922Z",
     "status": "active"
   },
   "countries": {
@@ -197,12 +197,7 @@
     "SA": {
       "currency": "SAR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "CH": {
@@ -225,12 +220,7 @@
     "BE": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "PL": {
