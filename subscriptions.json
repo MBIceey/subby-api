@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-17T03:45:19.644Z",
+    "lastUpdated": "2026-09-18T03:31:41.285Z",
     "status": "active"
   },
   "countries": {
@@ -57,12 +57,7 @@
     "IE": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "DE": {
@@ -186,7 +181,12 @@
     "AE": {
       "currency": "AED",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "SA": {
