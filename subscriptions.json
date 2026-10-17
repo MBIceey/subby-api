@@ -1,19 +1,29 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-16T03:26:29.418Z",
+    "lastUpdated": "2026-10-17T03:16:40.737Z",
     "status": "active"
   },
   "countries": {
     "US": {
       "currency": "USD",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "NZ": {
       "currency": "NZD",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "AU": {
@@ -30,17 +40,16 @@
     "GB": {
       "currency": "GBP",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "CA": {
       "currency": "CAD",
-      "netflix.com": [],
-      "youtube.com": [],
-      "spotify.com": []
-    },
-    "IE": {
-      "currency": "EUR",
       "netflix.com": [],
       "youtube.com": [
         {
@@ -48,6 +57,12 @@
           "cost": 1
         }
       ],
+      "spotify.com": []
+    },
+    "IE": {
+      "currency": "EUR",
+      "netflix.com": [],
+      "youtube.com": [],
       "spotify.com": []
     },
     "DE": {
@@ -155,12 +170,7 @@
     "ZA": {
       "currency": "ZAR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "AE": {
@@ -199,13 +209,23 @@
     "AT": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "BE": {
       "currency": "EUR",
       "netflix.com": [],
-      "youtube.com": [],
+      "youtube.com": [
+        {
+          "name": "Premium",
+          "cost": 1
+        }
+      ],
       "spotify.com": []
     },
     "PL": {
