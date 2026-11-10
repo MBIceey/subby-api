@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-09T04:56:39.828Z",
+    "lastUpdated": "2026-11-10T06:13:12.094Z",
     "status": "active"
   },
   "countries": {
@@ -202,12 +202,7 @@
     "SA": {
       "currency": "SAR",
       "netflix.com": [],
-      "youtube.com": [
-        {
-          "name": "Premium",
-          "cost": 1
-        }
-      ],
+      "youtube.com": [],
       "spotify.com": []
     },
     "CH": {
