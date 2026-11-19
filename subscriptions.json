@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-18T06:12:37.248Z",
+    "lastUpdated": "2026-11-19T06:14:14.924Z",
     "status": "active"
   },
   "countries": {
@@ -51,18 +51,18 @@
     "CA": {
       "currency": "CAD",
       "netflix.com": [],
+      "youtube.com": [],
+      "spotify.com": []
+    },
+    "IE": {
+      "currency": "EUR",
+      "netflix.com": [],
       "youtube.com": [
         {
           "name": "Premium",
           "cost": 1
         }
       ],
-      "spotify.com": []
-    },
-    "IE": {
-      "currency": "EUR",
-      "netflix.com": [],
-      "youtube.com": [],
       "spotify.com": []
     },
     "DE": {
